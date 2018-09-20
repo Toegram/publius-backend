@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-tony = User.create(name: "Tony")
-danielle = User.create(name: "Danielle")
-jared = User.create(name: "Jared")
-claudia = User.create(name: "Claudia")
-sean = User.create(name: "Sean")
+tony = User.create(name: "Tony", age: 30, country: "USA")
+danielle = User.create(name: "Danielle", age: 31, country: "Canada")
+jared = User.create(name: "Jared", age: 31, country: "Mexico")
+claudia = User.create(name: "Claudia", age: 32, country: "France")
+sean = User.create(name: "Sean", age: 26, country: "Arizona")
 
 espn = News.create(url: "http://www.espn.com/nfl/story/_/id/24716797/what-learned-week-2-2018-nfl-season-josh-gordon-lottery-ticket-pay-new-england-patriots")
 vet = News.create(url: "http://veterinarynews.dvm360.com/letter-dvm360-hot-water-bottles-hot-seat")
