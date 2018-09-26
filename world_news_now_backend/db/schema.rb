@@ -16,7 +16,14 @@ ActiveRecord::Schema.define(version: 2018_09_18_151057) do
   enable_extension "plpgsql"
 
   create_table "news", force: :cascade do |t|
+    t.string "author"
+    t.string "content"
+    t.string "description"
+    t.string "published_at"
+    t.string "source"
+    t.string "title"
     t.string "url"
+    t.string "url_to_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
