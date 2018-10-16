@@ -7,15 +7,14 @@ class Api::V1::NewsController < ApplicationController
   end
 
   def create
-      @book = Book.new(book_params)
-      if @book.save
-        render json: @book
+      @news = News.new(news_params)
+      if @news.save
+        UserNews.create(news_id: @news.id , user_id: params[:user_id])
+        render json: @news
       else
         render json: {errors: "Article did not save"}
       end
     end
-
-
 
   private
 

@@ -29,7 +29,11 @@ class Api::V1::UsersController < ApplicationController
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
   end
 
-  
+  def deletenews
+    @usernews = UserNews.find_by(user_id: params[:user_id], news_id: params[:news_id])
+    @usernews.destroy
+    render json: {message: "Deleted Successfully!"}
+  end
 
 
   private
